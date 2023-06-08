@@ -1,0 +1,20 @@
+﻿html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+    margin-bottom: 60px;
+    background: url("https://rare-gallery.com/uploads/posts/527313-corn.jpg") no-repeat center center fixed;
+    background-size: cover;
+}

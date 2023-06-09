@@ -15,6 +15,11 @@ html {
 
 body {
     margin-bottom: 60px;
-    background: url("https://rare-gallery.com/uploads/posts/527313-corn.jpg") no-repeat center center fixed;
-    background-size: cover;
+    background: #EBDF2C url("https://media.istockphoto.com/id/1481613520/vector/seamless-pattern-of-vegetables-linear-sweet-corn-cobs-with-pastel-colors-on-a-white.jpg?b=1&s=612x612&w=0&k=20&c=0lKvDRUDStwccihaep6LNJM0jSgHuaZX_3g-32c0LhQ=") repeat fixed;
+}
+
+#cornHeader {
+    background-color: #C0E3B1;
+    width: 50%;
+    margin: auto;
 }

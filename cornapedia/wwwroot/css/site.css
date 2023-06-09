@@ -18,8 +18,14 @@ body {
     background: #EBDF2C url("https://media.istockphoto.com/id/1481613520/vector/seamless-pattern-of-vegetables-linear-sweet-corn-cobs-with-pastel-colors-on-a-white.jpg?b=1&s=612x612&w=0&k=20&c=0lKvDRUDStwccihaep6LNJM0jSgHuaZX_3g-32c0LhQ=") repeat fixed;
 }
 
+#links {
+
+}
+
 #cornHeader {
     background-color: #C0E3B1;
     width: 50%;
     margin: auto;
+    font-family: 'Source Sans Pro', sans-serif;
+    text-decoration: double;
 }

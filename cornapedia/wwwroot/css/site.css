@@ -15,17 +15,19 @@ html {
 
 body {
     margin-bottom: 60px;
-    background: #EBDF2C url("https://media.istockphoto.com/id/1481613520/vector/seamless-pattern-of-vegetables-linear-sweet-corn-cobs-with-pastel-colors-on-a-white.jpg?b=1&s=612x612&w=0&k=20&c=0lKvDRUDStwccihaep6LNJM0jSgHuaZX_3g-32c0LhQ=") repeat fixed;
+    background: #EBDF2C /*yellow*/ url("https://media.istockphoto.com/id/1481613520/vector/seamless-pattern-of-vegetables-linear-sweet-corn-cobs-with-pastel-colors-on-a-white.jpg?b=1&s=612x612&w=0&k=20&c=0lKvDRUDStwccihaep6LNJM0jSgHuaZX_3g-32c0LhQ=") repeat fixed;
 }
 
 #links {
-
+    color: #87A07D; /*pale green*/
 }
 
 #cornHeader {
-    background-color: #C0E3B1;
+    padding-top: 60px;
+    background-color: transparent;
+    color: #87A07D; /*pale green*/
     width: 50%;
     margin: auto;
     font-family: 'Source Sans Pro', sans-serif;
-    text-decoration: double;
+    font-weight: bold;
 }

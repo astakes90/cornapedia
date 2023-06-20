@@ -18,6 +18,26 @@ public class HomeController : Controller
         return View();
     }
 
+    public IActionResult BoiledCone()
+    {
+        return Redirect("https://www.allrecipes.com/recipe/222352/jamies-sweet-and-easy-corn-on-the-cob/");
+    }
+
+    public IActionResult ConeDog()
+    {
+        return Redirect("https://www.allrecipes.com/recipe/35149/corn-dogs/");
+    }
+
+    public IActionResult GrilledCone()
+    {
+        return Redirect("https://www.spendwithpennies.com/grilled-corn-on-the-cob/");
+    }
+
+    public IActionResult PoppedCone()
+    {
+        return Redirect("https://wholefully.com/movie-theatre-popcorn-home/");
+    }
+
     public IActionResult Privacy()
     {
         return View();

@@ -15,27 +15,44 @@ public class HomeController : Controller
 
     public IActionResult Index()
     {
+        string[] photoFilenames = new string[]
+        {
+            "boilingCone.jpeg",
+            "grilledCone.jpeg",
+            "coneDog.jpeg",
+            "popCone.png"
+        };
+
+        Dictionary<string, string> recipeUrls = new Dictionary<string, string>
+        {
+            { "boilingCone.jpeg", "https://www.allrecipes.com/recipe/222352/jamies-sweet-and-easy-corn-on-the-cob/" },
+            { "grilledCone.jpeg", "https://www.spendwithpennies.com/grilled-corn-on-the-cob/" },
+            { "coneDog.jpeg", "https://www.allrecipes.com/recipe/35149/corn-dogs/" },
+            { "popCone.png", "https://wholefully.com/movie-theatre-popcorn-home/" }
+        };
+
+        ViewBag.PhotoFilenames = photoFilenames;
+        ViewBag.RecipeUrls = recipeUrls;
+
         return View();
     }
 
-    public IActionResult BoiledCone()
+    public IActionResult RedirectToRecipe(string recipeUrl)
     {
-        return Redirect("https://www.allrecipes.com/recipe/222352/jamies-sweet-and-easy-corn-on-the-cob/");
+        return Redirect(recipeUrl);
     }
 
-    public IActionResult ConeDog()
+    [NonAction]
+    public string GetRecipeUrl(string filename)
     {
-        return Redirect("https://www.allrecipes.com/recipe/35149/corn-dogs/");
-    }
-
-    public IActionResult GrilledCone()
-    {
-        return Redirect("https://www.spendwithpennies.com/grilled-corn-on-the-cob/");
-    }
-
-    public IActionResult PoppedCone()
-    {
-        return Redirect("https://wholefully.com/movie-theatre-popcorn-home/");
+        return filename switch
+        {
+            "boilingCone.jpeg" => "https://www.allrecipes.com/recipe/222352/jamies-sweet-and-easy-corn-on-the-cob/",
+            "grilledCone.jpeg" => "https://www.spendwithpennies.com/grilled-corn-on-the-cob/",
+            "coneDog.jpeg" => "https://www.allrecipes.com/recipe/35149/corn-dogs/",
+            "popCone.png" => "https://wholefully.com/movie-theatre-popcorn-home/",
+            _ => string.Empty,// Handle the case when no matching recipe URL is found
+        };
     }
 
     public IActionResult Privacy()
